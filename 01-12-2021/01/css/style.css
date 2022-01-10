@@ -1,0 +1,30 @@
+::first-letter {
+    font-size: 45px;
+    color: red;
+    }
+    ::selection {
+    /* SOLO PUEDEN MODIFICARSE
+    ESTAS
+    PROPIEDADES*/
+    background: yellow;
+    color: black;
+    text-shadow: 2px 2px 2px
+    rgba(0, 0, 0,0.5);
+    }
+    ::placeholder {
+    color: blue;
+    }
+
+[href*='GeekshubsAcademy']::after {
+    /* CONTENT ES DE USO OBLIGATORIO */
+    content:"❤";
+    }
+    [target='_blank']::before {
+    content: url(/01-12-2021/01/img/wallpaper-engine.jpg);
+    
+    transform: scale(0.5);
+    }
+
+* {
+    display: block;
+}

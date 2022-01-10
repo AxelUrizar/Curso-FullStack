@@ -1,0 +1,29 @@
+.padre{
+    background: red;
+    padding: 10px;
+    display: flex;
+    }
+    
+.hijo{
+    background: white;
+    }
+
+    .padre{
+        display: flex;
+        width: 600px;
+        }
+        .hijo:nth-child(1){
+        flex: 10px;
+        background: green;
+        }
+        .hijo:nth-child(2){
+            flex: 4;
+            background: blue;
+            }
+            .hijo:nth-child(3){
+            flex: 3;
+            background: grey;
+            }
+            .hijo:nth-child(4){
+            flex: 4;
+            }

@@ -1,0 +1,60 @@
+.todo{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.cabecera{
+    text-align: center;
+    background-color: rgb(156, 156, 156);
+    margin: 0 auto;
+}
+
+    h1{
+        margin: 0 auto;
+    }
+
+.cuerpo{
+    text-align: center;
+    background-color: rgb(207, 207, 207);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 24em;
+}
+
+.blackbox{
+    background-color: black;
+    width: 95%;
+    height: 50px;
+    margin: 10px;
+    text-align: end;
+}
+
+.cajasAzules{
+    margin: 0 auto;
+    width: 96%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.bluebox{
+    background-color: cornflowerblue;
+    margin: 0 auto;
+    display: flex;
+    width: 24%;
+    height: 24%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bluebox:hover{
+    cursor:pointer;
+}

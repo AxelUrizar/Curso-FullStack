@@ -1,0 +1,8 @@
+.back {
+    background-color: blue;
+    background-image: url(../img/geekshubsback.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    height: 450px;
+    width: 800px;
+    }

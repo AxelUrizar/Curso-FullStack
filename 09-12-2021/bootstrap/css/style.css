@@ -1,0 +1,23 @@
+.once{
+    border: solid 2px blue;
+    background-color: rgba(154, 182, 235, 0.699);
+    border-radius: 5px;
+}
+
+.cinco{
+    border: solid 2px purple;
+    background-color: rgba(155, 99, 192, 0.699);
+    border-radius: 5px;
+}
+
+.dos{
+    border: solid 2px rgb(245, 63, 190);
+    background-color: rgba(238, 130, 238, 0.616);
+    border-radius: 5px;
+    
+}
+
+
+
+
+
