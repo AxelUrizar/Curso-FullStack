@@ -1,3 +1,5 @@
+
+
 let filmTemplate = (film) => {
     
     let template = `<div class="col-lg-3 col-sm-6 d-flex justify-content-center align-items-center mt-4">
@@ -14,8 +16,8 @@ let filmTemplate = (film) => {
 
 // let filmRow = () => 
 
-const getFilms = async () => {
-    const res = await axios.get('https://api.themoviedb.org/3/movie/popular?api_key=cea68b520beecac6718820e4ac576c3a&language=es-ES&page=3');
+const getFilms = async (numPaginaBase) => {
+    const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=cea68b520beecac6718820e4ac576c3a&language=es-ES&page=${numPaginaBase}`);
 
     const films = res.data.results;
 
@@ -46,24 +48,34 @@ let later = (delay, /*getFilms*/) => {
         setTimeout(resolve, delay);
     });
 }
+const loading = (numPagina) => {
+        document.getElementById('films').style.display = 'none';
 
-document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById('loading').style.display = 'block';
+
+        getFilms(numPagina).then(() => {
+
+            document.getElementById('loading').style.display = 'none';
+
+            document.getElementById('films').style.display = 'block';
+
+        }, null)
+
+    }
+
+const cargaPeliculas = (numPagina) => {
+    let elem = document.querySelector ( '#rooster' );
+    elem.innerHTML = '';
+    loading(numPagina);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
     //código a ejecutar cuando el DOM está listo para recibir acciones
-    
-    document.getElementById('films').style.display = 'none';
-
-    document.getElementById('loading').style.display = 'block';
-
-    getFilms().then(() => {
-
-        document.getElementById('loading').style.display = 'none';
-
-        document.getElementById('films').style.display = 'block';
-
-    }, null)
-
-    // later(15000).then(() => {
-
-    // }, null);
-
+    loading();
 });
+
+
+
+
+
+
