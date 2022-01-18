@@ -1,0 +1,19 @@
+{
+  "name": "caluladora",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "suma": "node suma.js",
+    "suma-async": "node suma-async.js",
+    "resta": "node resta.js",
+    "mult": "node mult.js",
+    "div": "node div.js",
+    "calculadora": "node calculadora.js"
+  },
+  "dependencies": {
+    "commander": "^8.3.0"
+  }
+}

@@ -1,0 +1,1 @@
+import { suma, resta, mult, div } from "./calculadora";

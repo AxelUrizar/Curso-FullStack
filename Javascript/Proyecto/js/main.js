@@ -53,7 +53,6 @@ const getFilms = async (numPaginaBase = 1) => {
     }
     
     const filtrar = () => {
-        console.log(buscador.value);
         elem.innerHTML = '';
 
         const texto = buscador.value.toLowerCase();
@@ -100,30 +99,21 @@ const loading = (numPagina = 1) => {
 
     document.getElementById('loading').style.display = 'block';
 
+    console.log(numPagina)
+
     getFilms(numPagina).then(() => {
 
         document.getElementById('loading').style.display = 'none';
 
         document.getElementById('films').style.display = 'block';
 
-    }, null)
-
-    anterior.addEventListener('click', () => {
-        elem.innerHTML = '';
-        getFilms(numPagina -= 1);
-    });
-
-    siguiente.addEventListener('click', () => {
-        elem.innerHTML = '';
-        getFilms(numPagina += 1);            
-    });
-        
+    }, null)     
 }
 
-const cargaPeliculas = (numPagina) => {
-    elem.innerHTML = '';
-    loading(numPagina);
-}
+// const cargaPeliculas = (numPagina) => {
+//     elem.innerHTML = '';
+//     loading(numPagina);
+// }
 
 document.addEventListener("DOMContentLoaded", () => {
     //código a ejecutar cuando el DOM está listo para recibir acciones
@@ -136,6 +126,13 @@ for (let i = 1; i < 11; i++) {
         });
 }
 
+anterior.addEventListener('click', () => {
+    elem.innerHTML = '';
+    getFilms(numPagina - 1);
+});
 
-
+siguiente.addEventListener('click', () => {
+    elem.innerHTML = '';
+    getFilms(numPagina + 1);            
+});
 
