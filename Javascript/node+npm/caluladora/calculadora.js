@@ -8,3 +8,4 @@ const div = (a, b) => {
 
 export {suma, resta, mult, div};
 // module.exports = {suma, resta, mult, div};
+    
