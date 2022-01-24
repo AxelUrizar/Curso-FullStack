@@ -32,6 +32,7 @@ app.get('/movie/:id', (req, res)=>{
 
 app.get("/buscador", (req, res)=>{
     let peliculasEncontradas = [];
+    
     for (const pelicula of listadoPeliculas) {
         let textoBuscado = req.query.movie.toLowerCase();
         let titulo = pelicula.titulo.toLowerCase();
