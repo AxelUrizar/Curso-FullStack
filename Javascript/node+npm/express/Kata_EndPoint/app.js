@@ -18,7 +18,7 @@ app.listen(port, ()=> console.log('Servidor levantado en 3000'));
 app.get('/', (req, res) => res.send('Hello World!'));
 
 app.get('/movies', (req, res)=> {
-    res.json({listadoPeliculas});
+    res.json(listadoPeliculas);
 });
 
 app.get('/movie/:id', (req, res)=>{
@@ -36,6 +36,7 @@ app.get("/buscador", (req, res)=>{
     for (const pelicula of listadoPeliculas) {
         let textoBuscado = req.query.movie.toLowerCase();
         let titulo = pelicula.titulo.toLowerCase();
+        
         if (titulo.indexOf(textoBuscado) !== -1) {
             peliculasEncontradas.push(pelicula.titulo);
         }
