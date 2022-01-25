@@ -1,0 +1,20 @@
+{{ appName }}
+{{#unless usuarios}}
+No hay usuarios
+{{/unless}}
+
+{{#if usuarios.length}}
+    {{#each usuarios}}
+        {{id}}: {{name}},
+    {{/each}}
+{{else}}
+No hay usuarios.
+{{/if}}
+
+{{#with administrador}}
+Nombre: {{ nombre}} , Apellidos : {{ apellidos }}
+{{else}}
+No existe el administrador
+{{/with}}
+
+{{ > test }}

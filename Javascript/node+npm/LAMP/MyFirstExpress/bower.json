@@ -1,0 +1,20 @@
+{
+  "name": "myfirstexpress",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "AxelUrizar <axelurizarmartin@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/AxelUrizar/Curso-FullStack",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
