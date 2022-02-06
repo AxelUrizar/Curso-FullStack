@@ -1,20 +1,24 @@
 const express = require('express');
-const app = express();
+const { loggers } = require('winston');
+const morgan = require('morgan')
 
-var createRouter = require('./routes/create');
-var readRouter = require('./routes/index');
 // var upgradeRouter = require('./routes/upgrade');
 // var deleteRouter = require('./routes/delete');
+const app = express();
 var PORT = 3000;
+
+app.use(express.json());
+
 
 app.listen(PORT)
 
+const moviesRouter = require('./routes/moviesRouter')
+app.use('/movies', moviesRouter)
 
-app.use('/', readRouter);
-app.use('/create', createRouter);
-// app.use('/upgrade', upgradeRouter);
-// app.use('/delete', deleteRouter);
-// app.use('/orders', ordersRouter);
+app.get('/', (req, res) => {
+  res.send('Bienvenido a Express')
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
