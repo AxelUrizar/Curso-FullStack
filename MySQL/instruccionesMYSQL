@@ -1,0 +1,28 @@
+Crud
+	Create: INSERT INTO tablaObjetivo (valores que se crearán)
+		VALUES (valores creados);
+
+	
+
+	Read: SELECT (Valor que queremos ver [el uso de '*' nos permite ver todos los valores])
+	      FROM nombreTabla;
+		
+
+	      [[DESCRIBE tablaObjetivo] mostrará toda la tabla sin necesidad de usar SELECT]
+
+	
+	Update: UPDATE tablaObjetivo SET columna_a_editar = 'variableEditada', otraColumna-a-editar = 'variableEditada2'
+		WHERE variableTabla = fila_a_editar;
+
+
+	
+	Delete: DELETE FROM tablaObjetivo WHERE variableTabla = variableFila;
+
+
+	
+	[[Añadiendo 'WHERE VariableTabla = variableFila' antes de ';' podemos seleccionar que fila deseamos ver buscandola por el valor de su variable]]
+________________________________________________________________________________________________________________________________________________________
+
+
+
+

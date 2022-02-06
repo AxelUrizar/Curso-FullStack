@@ -55,3 +55,5 @@
 -- 1.19. !!No se porqué pero desde mysql esta linea de comandos no me funciona, sin embargo al hacerlo manualmente desde la terminal me funciona perfectamente¡¡
 	#UPDATE articulos SET precio = precio * 0.9; 
 
+-- 1.20. !!Me pasa lo mismo que con el anterior ejercicio¡¡
+	#UPDATE articulos SET precio = precio - 10 WHERE precio >= 120;
