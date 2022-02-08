@@ -8,7 +8,7 @@ Crud
 	      FROM nombreTabla;
 		
 
-	      [[DESCRIBE tablaObjetivo] mostrará toda la tabla sin necesidad de usar SELECT]
+	      [[DESCRIBE tablaObjetivo] mostrará toda la DATABASE enseñando todas sus tablas internas]
 
 	
 	Update: UPDATE tablaObjetivo SET columna_a_editar = 'variableEditada', otraColumna-a-editar = 'variableEditada2'
