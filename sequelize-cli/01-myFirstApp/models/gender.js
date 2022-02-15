@@ -12,8 +12,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Movie.belongsTo(models.Gender, {
-        foreignKey: 'genderID',
+      Gender.belongsTo(models.Movie, {
+        foreignKey: 'movieID',
         onDelete: 'set NULL'
       })
     }
